@@ -26,7 +26,25 @@ const getPlants = async (req, res) => {
         })
     }
 }
+
+const getPlantById = async (req, res) => {
+    try {
+        const { id } = req.params
+        const plant = await Plant.findById(id)
+        return res.status(200).json({
+            plant
+        })
+
+    } catch(error) {
+        return res.status(500).json({
+            error: error.message
+        })
+    } 
+}
+
+
 module.exports = {
     createPlant,
-    getPlants
+    getPlants,
+    getPlantById
 }
