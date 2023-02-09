@@ -1,0 +1,26 @@
+{
+  "name": "plant-finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ap2121/Plant-Finder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ap2121/Plant-Finder/issues"
+  },
+  "homepage": "https://github.com/ap2121/Plant-Finder#readme",
+  "dependencies": {
+    "mongoose": "^6.9.1"
+  }
+}
