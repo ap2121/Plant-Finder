@@ -6,7 +6,7 @@ router.get('/', (req, res) => res.send('This is root!'))
 
 //plant routes
 router.post('/plants', controllers.createPlant)
-
+router.get('/plants', controllers.getPlants)
 
 
 
