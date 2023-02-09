@@ -14,6 +14,6 @@ Search and find your house plants from different regions and get the proper grow
 - Img2
 
 ## Future Updates
-[] Updating databse
-[] Allow for range of numbers in NUMBER types
+- Updating databse
+- Allow for range of numbers in NUMBER types
 
