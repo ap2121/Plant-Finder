@@ -1,42 +1,48 @@
 const db = require('../db')
 
-const {Plant, Region} = require('../models')
+const Plant = require('../models/plant')
+const Region = require('../models/region')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error'))
 
 const main = async () => {
+    await Plant.collection.drop()
+    await Region.collection.drop()
     const region1 = await new Region({
         name: 'Southeast Asia'
 
     })
     region1.save()
-
+   
     const region2 = await new Region({
         name: 'North America'
     })
     region2.save()
-    
+        
     const region3 = await new Region ({
         name: 'South America'
     })
     region3.save()
-
+    
     const region4 = await new Region({
         name: "Caribbean"
     })
 
     region4.save()
-
+    
+    
     const region5 = await new Region({
         name: 'Southern Europe'
     })
 
     region5.save()
-
+    
+    
     const region6 = await new Region({
         name: 'Northern Africa'
     })
-
+    region6.save()
+    
     const plants = [
     {
         commonName: 'Rubber Plant',
@@ -317,30 +323,24 @@ const main = async () => {
         water: 'Once a week',
         nativeRegion: region5._id 
     },
-    // {
-    //     commonName: 'Catnip',
-    //     scientificName: '',
-    //     img: 'sdfd',
-    //     sunExposure: '', 
-    //     matureSize: ,
-    //     soilType: '',
-    //     soilPHAvg: ,
-    //     hardinessZone: ,
-    //     water: ,
-    //     nativeRegion: 
-    // }
+     {
+        //  commonName: 'Catnip',
+        //  scientificName: '',
+        //  img: 'sdfd',
+        // sunExposure: '', 
+        //  matureSize: ,
+        //  soilType: '',
+        //  soilPHAvg: ,
+        //  hardinessZone: ,
+        //  water: ,
+        //  nativeRegion: 
+     }
 ]
-
+    await Plant.insertMany(plants)
+    console.log('Created plants')
 }
 
 const run = async() => {
-    db.dropDatabase((err) => {
-        if(err) {
-            console.error(err)
-        } else {
-            console.log('Successfully dropped the previous data')
-        }
-    })
     await main()
     db.close()
 }
