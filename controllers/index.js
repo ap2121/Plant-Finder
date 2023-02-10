@@ -1,4 +1,5 @@
 const Plant = require('../models/plant')
+const Region = require('../models/region')
 const { findByIdAndDelete } = require('../models/region')
 
 const createPlant = async (req, res) => {
@@ -17,7 +18,7 @@ const createPlant = async (req, res) => {
 
 const getPlants = async (req, res) => {
     try {
-        const plants = await Plant.find()
+        const plants = await Plant.find().populate('nativeRegion')
         return res.status(200).json({
             plants
         })
@@ -56,7 +57,7 @@ const updatePlant = async (req, res) => {
 const deletePlant = async (req, res) => {
     try {
         const { id } = req.params
-        const deleted = findByIdAndDelete(id)
+        const deleted = await Plant.findByIdAndDelete(id)
         if(deleted) {
             return res.status(200).send('Plant deleted')
         } 
@@ -66,10 +67,39 @@ const deletePlant = async (req, res) => {
     }
 }
 
+const getRegions = async (req, res) => {
+    try {
+        const regions = await Region.find()
+        res.status(200).json({
+            regions
+        })
+    } catch(error) {
+        return res.status(500).json({
+            error:error.message
+        })
+            
+        }
+    }
+
+const getPlantByRegion = async (req,res) => {
+    try {
+    const { id } = req.params
+    const plants = await Plant.find({nativeRegion: id })
+    return res.status(200).json({
+        plants
+    })
+} catch(error) {
+    return res.status(500).json({
+        error: error.message
+    })
+}
+}
 module.exports = {
     createPlant,
     getPlants,
     getPlantById,
     updatePlant,
-    deletePlant
+    deletePlant,
+    getPlantByRegion,
+    getRegions
 }

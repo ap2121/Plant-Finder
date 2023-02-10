@@ -6,7 +6,7 @@ const Plant = new Schema({
     scientificName: {type: String, required: true},
     img: {type: String, required: true},
     sunExposure: {type: String, required: true},
-    matureSize: {type: String, required: true},
+    matureSize: {type: Number, required: true},
     soilType: {type: String, required: true},
     soilPHAvg: {type: Number, required: true},
     hardinessZone: {type: Number, required: true},

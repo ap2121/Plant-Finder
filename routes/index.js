@@ -9,6 +9,9 @@ router.post('/plants', controllers.createPlant)
 router.get('/plants', controllers.getPlants)
 router.get('/plants/:id', controllers.getPlantById)
 router.put('/plants/:id', controllers.updatePlant)
-router.delete('plants/:id', controllers.deletePlant)
-
+router.delete('/plants/:id', controllers.deletePlant)
+router.get('/plants/region/:id', controllers.getPlantByRegion)
+//
+//region routes
+router.get('/regions', controllers.getRegions)
 module.exports = router;

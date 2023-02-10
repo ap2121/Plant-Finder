@@ -6,7 +6,7 @@ const Region = require('../models/region')
 db.on('error', console.error.bind(console, 'MongoDB connection error'))
 
 const main = async () => {
-    await Plant.collection.drop()
+    Plant.collection.drop()
     await Region.collection.drop()
     const region1 = await new Region({
         name: 'Southeast Asia'
@@ -275,6 +275,19 @@ const main = async () => {
         water: 'Once a week',
         nativeRegion: region2._id
     },
+    
+    {
+        commonName: 'Angel Trumpet',
+        scientificName: 'Burgmansia spp.',
+        img: 'sdfd',
+        sunExposure: 'Full sun', 
+        matureSize: 120,
+        soilType: 'Well draining',
+        soilPHAvg: 6,
+        hardinessZone: 10,
+        water: 'Bi-weekly',
+        nativeRegion: region3._id
+    },
     {
         commonName: 'Holly',
         scientificName: 'llex opaca',
@@ -287,18 +300,7 @@ const main = async () => {
         water: 'Bi-weekly',
         nativeRegion: region2._id
     }, 
-    {
-        commonName: 'Angel Trumpet',
-        scientificName: 'Burgmansia spp.',
-        img: 'sdfd',
-        sunExposure: 'full', 
-        matureSize: 120,
-        soilType: 'Well draining',
-        soilPHAvg: 6,
-        hardinessZone: 10,
-        water: 'Bi-weekly',
-        nativeRegion: region3._id
-    },
+   
     {
         commonName: 'Cuban Royal Palm',
         scientificName: 'Roystonea regia',
@@ -322,19 +324,8 @@ const main = async () => {
         hardinessZone: 6,
         water: 'Once a week',
         nativeRegion: region5._id 
-    },
-     {
-        //  commonName: 'Catnip',
-        //  scientificName: '',
-        //  img: 'sdfd',
-        // sunExposure: '', 
-        //  matureSize: ,
-        //  soilType: '',
-        //  soilPHAvg: ,
-        //  hardinessZone: ,
-        //  water: ,
-        //  nativeRegion: 
-     }
+    }
+     
 ]
     await Plant.insertMany(plants)
     console.log('Created plants')
@@ -344,4 +335,5 @@ const run = async() => {
     await main()
     db.close()
 }
+
 run()
