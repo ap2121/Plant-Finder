@@ -1,38 +1,50 @@
-.App {
+.home-screen {
+  display: flex;
+  justify-content: center;
+  
+
+}
+
+.home-card {
+  margin: 20px 10px;
+  }
+
+.homecard-link {
+  text-decoration: none;
+}
+
+nav {
+  background-color: aquamarine;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  margin: 10px;
+  text-decoration: none;
+  color: navy;
+}
+
+.plant-list {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.plant-card {
+  max-width: 300px;
+  max-height: 380px;
+  border-radius: 10px;
+  background-color: #3A5F0B ;
+  cursor: pointer;
+  transition: all 0.2s;
   color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.container-grid {
+  padding: 2em 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  grid-gap: 1em;
+  justify-content: center;
 }

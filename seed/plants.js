@@ -1,8 +1,8 @@
 const db = require('../db')
 
 const Plant = require('../models/plant')
-const region = require('../models/region')
 const Region = require('../models/region')
+
 
 db.on('error', console.error.bind(console, 'MongoDB connection error'))
 
@@ -10,37 +10,43 @@ const main = async () => {
     await Plant.collection.drop()
     await Region.collection.drop()
     const region1 = await new Region({
-        name: 'Southeast Asia'
+        name: 'Southeast Asia',
+        rImg: 'dsjfj'
 
     })
     region1.save()
    
     const region2 = await new Region({
-        name: 'North America'
+        name: 'North America',
+        rImg: 'asfb'
     })
     region2.save()
         
     const region3 = await new Region ({
-        name: 'South America'
+        name: 'South America',
+        rImg: 'afhfbs'
     })
     region3.save()
     
     const region4 = await new Region({
-        name: "Caribbean"
+        name: "Caribbean",
+        rImg: 'djfnsa'
     })
 
     region4.save()
     
     
     const region5 = await new Region({
-        name: 'Southern Europe'
+        name: 'Southern Europe',
+        rImg: 'asnas'
     })
 
     region5.save()
     
     
     const region6 = await new Region({
-        name: 'Northern Africa'
+        name: 'Northern Africa',
+        rImg: 'sfasf'
     })
     region6.save()
     
@@ -530,201 +536,201 @@ const main = async () => {
         hardinessZone: 11,
         water: 'Bi-weekly',
         nativeRegion: region6._id
-    },
-    {
-        commonName: 'Stinging Nettle',
-        scientificName: 'Urtica Dioica',
-        img: 'sdfd',
-        sunExposure: 'Part sun', 
-        matureSize: 72,
-        soilType: 'Well draining',
-        soilPHAvg: 7,
-        hardinessZone: 8,
-        water: 'Once a week',
-        nativeRegion: region2._id
-    },
-    {
-        commonName: 'Stargazer Lily',
-        scientificName: 'Lilium stargazer',
-        img: 'sdfd',
-        sunExposure: 'Full sun', 
-        matureSize: 48,
-        soilType: 'Well draining',
-        soilPHAvg: 6.5,
-        hardinessZone: 6,
-        water: 'Once a week',
-        nativeRegion: region1._id
-    },
-    {
-        commonName: 'Spiral Aloe',
-        scientificName: 'Aloe ployehylla',
-        img: 'sdfd',
-        sunExposure: 'Full sun', 
-        matureSize: 12,
-        soilType: 'Well draining',
-        soilPHAvg: 6,
-        hardinessZone: 8,
-        water: 'Once a month',
-        nativeRegion: region6._id
-    },
-    {
-        commonName: 'Spider Plant',
-        scientificName: 'Chlorophytum comosum',
-        img: 'sdfd',
-        sunExposure: 'Part sun', 
-        matureSize: 36,
-        soilType: 'Well draining',
-        soilPHAvg: 7,
-        hardinessZone: 8,
-        water: 'Once a week',
-        nativeRegion: region6._id 
-    },
-    {
-        commonName: 'Snow Pea',
-        scientificName: 'Pisum sativum var',
-        img: 'sdfd',
-        sunExposure: 'Part sun', 
-        matureSize: 18,
-        soilType: 'Medium moisture',
-        soilPHAvg: 7,
-        hardinessZone: 6,
-        water: 'Three times a week',
-        nativeRegion: region5._id 
-    },
-    {
-        commonName: 'Slipper plant',
-        scientificName: 'Euphorbia lomelii',
-        img: 'sdfd',
-        sunExposure: 'Full sun', 
-        matureSize: 60,
-        soilType: 'Well draining',
-        soilPHAvg: 7,
-        hardinessZone: 8,
-        water: 'Bi-weekly',
-        nativeRegion: region3._id
-    },
-    {
-        commonName: 'Silver Sword',
-        scientificName: 'Philodendron hastatum',
-        img: 'sdfd',
-        sunExposure: 'Part sun', 
-        matureSize: 12,
-        soilType: 'Well draining',
-        soilPHAvg: 5,
-        hardinessZone: 7,
-        water: 'Once a week',
-        nativeRegion: region3._id
-    },
-    {
-        commonName: 'Silver Dragon Alocasia',
-        scientificName: 'Alocasia baginda silver dragon',
-        img: 'sdfd',
-        sunExposure: 'Part sun', 
-        matureSize: 6,
-        soilType: 'Well draining',
-        soilPHAvg: 6,
-        hardinessZone: 10,
-        water: 'Twice a week',
-        nativeRegion: region1._id
-    },
-    {
-        commonName: 'Satin Tothos',
-        scientificName: 'Scindapsus pictus',
-        img: 'sdfd',
-        sunExposure: 'Part sun', 
-        matureSize: 120,
-        soilType: 'Medium moisture',
-        soilPHAvg: 6.5,
-        hardinessZone: 11,
-        water: 'Once a week',
-        nativeRegion: region1._id
-    },
-    {
-        commonName: 'Sago Palm',
-        scientificName: 'Cycas revoluta',
-        img: 'sdfd',
-        sunExposure: 'Full sun', 
-        matureSize: 120,
-        soilType: 'Medium moisture',
-        soilPHAvg: 6,
-        hardinessZone: 10,
-        water: 'Once a week',
-        nativeRegion: region1._id  
-    },
-    {
-        commonName: 'Moon Cactus',
-        scientificName: 'Gymnocalycium mihanodichii',
-        img: 'sdfd',
-        sunExposure: 'Full sun', 
-        matureSize: 8,
-        soilType: 'Cactus mix',
-        soilPHAvg: 6,
-        hardinessZone: 12,
-        water: 'Once a month',
-        nativeRegion: region2._id
-    },
-    {
-        commonName: 'Rockrose',
-        scientificName: 'Cistus',
-        img: 'sdfd',
-        sunExposure: 'Full sun', 
-        matureSize: 48,
-        soilType: 'Well draining',
-        soilPHAvg: 6.5,
-        hardinessZone: 7,
-        water: 'Once a week',
-        nativeRegion: region5._id
-    },
-    {
-        commonName: 'Red Spider Lily',
-        scientificName: 'Lycoris Radiata',
-        img: 'sdfd',
-        sunExposure: 'Full sun', 
-        matureSize: 24,
-        soilType: 'Well draining',
-        soilPHAvg: 6.5,
-        hardinessZone: 8,
-        water: 'Once a week',
-        nativeRegion: region1._id 
-
-    },
-    {
-        commonName: 'Red Ginger',
-        scientificName: 'Alpinia Purpurata',
-        img: 'sdfd',
-        sunExposure: 'Part sun', 
-        matureSize: 48,
-        soilType: 'Well draining',
-        soilPHAvg: 6.5,
-        hardinessZone: 8,
-        water: 'Once a week',
-        nativeRegion: region1._id
-    },
-    {
-        commonName: 'Rain Lily',
-        scientificName: 'Zephyranthes',
-        img: 'sdfd',
-        sunExposure: 'Full sun', 
-        matureSize: 12,
-        soilType: 'Medium moisture',
-        soilPHAvg: 6.5,
-        hardinessZone: 8,
-        water: 'Once a week',
-        nativeRegion: region3._id
-    },
-    {
-        commonName: 'Pussy Willow',
-        scientificName: 'Salix discolor',
-        img: 'sdfd',
-        sunExposure: 'Part sun', 
-        matureSize: 120,
-        soilType: 'Medium Moisture',
-        soilPHAvg: 7,
-        hardinessZone: 6,
-        water: 'Once a week',
-        nativeRegion: region2._id
     }
-    
+    // {
+    //     commonName: 'Stinging Nettle',
+    //     scientificName: 'Urtica Dioica',
+    //     img: 'sdfd',
+    //     sunExposure: 'Part sun', 
+    //     matureSize: 72,
+    //     soilType: 'Well draining',
+    //     soilPHAvg: 7,
+    //     hardinessZone: 8,
+    //     water: 'Once a week',
+    //     nativeRegion: region2._id
+    // },
+    // {
+    //     commonName: 'Stargazer Lily',
+    //     scientificName: 'Lilium stargazer',
+    //     img: 'sdfd',
+    //     sunExposure: 'Full sun', 
+    //     matureSize: 48,
+    //     soilType: 'Well draining',
+    //     soilPHAvg: 6.5,
+    //     hardinessZone: 6,
+    //     water: 'Once a week',
+    //     nativeRegion: region1._id
+    // },
+    // {
+    //     commonName: 'Spiral Aloe',
+    //     scientificName: 'Aloe ployehylla',
+    //     img: 'sdfd',
+    //     sunExposure: 'Full sun', 
+    //     matureSize: 12,
+    //     soilType: 'Well draining',
+    //     soilPHAvg: 6,
+    //     hardinessZone: 8,
+    //     water: 'Once a month',
+    //     nativeRegion: region6._id
+    // },
+    // {
+    //     commonName: 'Spider Plant',
+    //     scientificName: 'Chlorophytum comosum',
+    //     img: 'sdfd',
+    //     sunExposure: 'Part sun', 
+    //     matureSize: 36,
+    //     soilType: 'Well draining',
+    //     soilPHAvg: 7,
+    //     hardinessZone: 8,
+    //     water: 'Once a week',
+    //     nativeRegion: region6._id 
+    // },
+    // {
+    //     commonName: 'Snow Pea',
+    //     scientificName: 'Pisum sativum var',
+    //     img: 'sdfd',
+    //     sunExposure: 'Part sun', 
+    //     matureSize: 18,
+    //     soilType: 'Medium moisture',
+    //     soilPHAvg: 7,
+    //     hardinessZone: 6,
+    //     water: 'Three times a week',
+    //     nativeRegion: region5._id 
+    // },
+    // {
+    //     commonName: 'Slipper plant',
+    //     scientificName: 'Euphorbia lomelii',
+    //     img: 'sdfd',
+    //     sunExposure: 'Full sun', 
+    //     matureSize: 60,
+    //     soilType: 'Well draining',
+    //     soilPHAvg: 7,
+    //     hardinessZone: 8,
+    //     water: 'Bi-weekly',
+    //     nativeRegion: region3._id
+    // },
+    // {
+    //     commonName: 'Silver Sword',
+    //     scientificName: 'Philodendron hastatum',
+    //     img: 'sdfd',
+    //     sunExposure: 'Part sun', 
+    //     matureSize: 12,
+    //     soilType: 'Well draining',
+    //     soilPHAvg: 5,
+    //     hardinessZone: 7,
+    //     water: 'Once a week',
+    //     nativeRegion: region3._id
+    // },
+    // {
+    //     commonName: 'Silver Dragon Alocasia',
+    //     scientificName: 'Alocasia baginda silver dragon',
+    //     img: 'sdfd',
+    //     sunExposure: 'Part sun', 
+    //     matureSize: 6,
+    //     soilType: 'Well draining',
+    //     soilPHAvg: 6,
+    //     hardinessZone: 10,
+    //     water: 'Twice a week',
+    //     nativeRegion: region1._id
+    // },
+    // {
+    //     commonName: 'Satin Tothos',
+    //     scientificName: 'Scindapsus pictus',
+    //     img: 'sdfd',
+    //     sunExposure: 'Part sun', 
+    //     matureSize: 120,
+    //     soilType: 'Medium moisture',
+    //     soilPHAvg: 6.5,
+    //     hardinessZone: 11,
+    //     water: 'Once a week',
+    //     nativeRegion: region1._id
+    // },
+    // {
+    //     commonName: 'Sago Palm',
+    //     scientificName: 'Cycas revoluta',
+    //     img: 'sdfd',
+    //     sunExposure: 'Full sun', 
+    //     matureSize: 120,
+    //     soilType: 'Medium moisture',
+    //     soilPHAvg: 6,
+    //     hardinessZone: 10,
+    //     water: 'Once a week',
+    //     nativeRegion: region1._id  
+    // },
+    // {
+    //     commonName: 'Moon Cactus',
+    //     scientificName: 'Gymnocalycium mihanodichii',
+    //     img: 'sdfd',
+    //     sunExposure: 'Full sun', 
+    //     matureSize: 8,
+    //     soilType: 'Cactus mix',
+    //     soilPHAvg: 6,
+    //     hardinessZone: 12,
+    //     water: 'Once a month',
+    //     nativeRegion: region2._id
+    // },
+    // {
+    //     commonName: 'Rockrose',
+    //     scientificName: 'Cistus',
+    //     img: 'sdfd',
+    //     sunExposure: 'Full sun', 
+    //     matureSize: 48,
+    //     soilType: 'Well draining',
+    //     soilPHAvg: 6.5,
+    //     hardinessZone: 7,
+    //     water: 'Once a week',
+    //     nativeRegion: region5._id
+    // },
+    // {
+    //     commonName: 'Red Spider Lily',
+    //     scientificName: 'Lycoris Radiata',
+    //     img: 'sdfd',
+    //     sunExposure: 'Full sun', 
+    //     matureSize: 24,
+    //     soilType: 'Well draining',
+    //     soilPHAvg: 6.5,
+    //     hardinessZone: 8,
+    //     water: 'Once a week',
+    //     nativeRegion: region1._id 
+
+    // },
+    // {
+    //     commonName: 'Red Ginger',
+    //     scientificName: 'Alpinia Purpurata',
+    //     img: 'sdfd',
+    //     sunExposure: 'Part sun', 
+    //     matureSize: 48,
+    //     soilType: 'Well draining',
+    //     soilPHAvg: 6.5,
+    //     hardinessZone: 8,
+    //     water: 'Once a week',
+    //     nativeRegion: region1._id
+    // },
+    // {
+    //     commonName: 'Rain Lily',
+    //     scientificName: 'Zephyranthes',
+    //     img: 'sdfd',
+    //     sunExposure: 'Full sun', 
+    //     matureSize: 12,
+    //     soilType: 'Medium moisture',
+    //     soilPHAvg: 6.5,
+    //     hardinessZone: 8,
+    //     water: 'Once a week',
+    //     nativeRegion: region3._id
+    // },
+    // {
+    //     commonName: 'Pussy Willow',
+    //     scientificName: 'Salix discolor',
+    //     img: 'sdfd',
+    //     sunExposure: 'Part sun', 
+    //     matureSize: 120,
+    //     soilType: 'Medium Moisture',
+    //     soilPHAvg: 7,
+    //     hardinessZone: 6,
+    //     water: 'Once a week',
+    //     nativeRegion: region2._id
+    // }
+
      
 ]
     await Plant.insertMany(plants)
