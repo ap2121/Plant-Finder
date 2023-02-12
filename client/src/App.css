@@ -14,7 +14,7 @@
 }
 
 nav {
-  background-color: aquamarine;
+  background-color: #3A5F0B;
   padding: 10px;
   display: flex;
   justify-content: space-around;
@@ -23,18 +23,16 @@ nav {
 .nav-item {
   margin: 10px;
   text-decoration: none;
-  color: navy;
+  color: white;
 }
 
-.plant-list {
-  text-align: center;
-}
+
 
 .plant-card {
   max-width: 300px;
   max-height: 380px;
   border-radius: 10px;
-  background-color: #3A5F0B ;
+  background-color: #3A5F0B;
   cursor: pointer;
   transition: all 0.2s;
   color: white;
@@ -44,7 +42,70 @@ nav {
 .container-grid {
   padding: 2em 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fill, 300px);
   grid-gap: 1em;
   justify-content: center;
+  text-align: center;
 }
+
+.plant-conditions {
+  text-align: center;
+  
+}
+
+.region-container {
+  padding: 2em 0;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 1em;
+  justify-content: center;
+  text-align: center;
+}
+
+.region-list {
+  max-width: 300px;
+  max-height: 380px;
+  border-radius: 10px;
+  background-color: #3A5F0B;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: white;
+}
+
+.glossary-container {
+  text-align: center;
+  
+  
+  
+}
+
+.glossary-container h2 {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  grid-gap: 2em;
+  justify-content: center;
+  margin: 10px
+
+}
+
+
+  .term {
+  font-weight: bold;
+  text-decoration: underline;
+ 
+ 
+} 
+
+.def-container {
+  border: 4px double #3A5F0B;
+  padding: 10px;
+}
+/* .def {
+  border: 4px double #3A5F0B;
+  padding: 10px;
+} */

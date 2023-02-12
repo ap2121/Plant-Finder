@@ -8,8 +8,7 @@ const AllPlants = () => {
    const getPlants = async () => {
     const response = await axios.get('http://localhost:3001/api/plants')
     setCurrentPlants(response.data.plants)
-    console.log(response.data.plants)
-    
+   
    }
 
    useEffect(() =>{
@@ -21,14 +20,8 @@ const AllPlants = () => {
     key={plant._id}
     commonName = {plant.commonName}
     scientificName={plant.scientificName}
-    water={plant.water}
-    sunExposure={plant.sunExposure}
-    matureSize={plant.matureSize}
-    soilType = {plant.soilType}
-    soilPHAvg={plant.soilPHAvg}
-    hardinessZone={plant.hardinessZone}
-
-    />
+    id={plant._id}
+   />
   ))
     
     return (

@@ -1,5 +1,6 @@
 const Plant = require('../models/plant')
 const Region = require('../models/region')
+const Gloss = require('../models/glossary')
 const { findByIdAndDelete } = require('../models/region')
 
 const createPlant = async (req, res) => {
@@ -94,6 +95,19 @@ const getPlantByRegion = async (req,res) => {
     })
 }
 }
+
+const getGlossary = async (req, res) => {
+    try {
+        const defs = await Gloss.find()
+        return res.status(200).json({
+            defs
+        })
+    } catch(error) {
+        return res.status(500).json({
+            error: error.message
+        })
+    }
+}
 module.exports = {
     createPlant,
     getPlants,
@@ -101,5 +115,6 @@ module.exports = {
     updatePlant,
     deletePlant,
     getPlantByRegion,
-    getRegions
+    getRegions,
+    getGlossary
 }

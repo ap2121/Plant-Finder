@@ -15,6 +15,6 @@ router.get('/plants/region/:id', controllers.getPlantByRegion)
 //region routes
 router.get('/regions', controllers.getRegions)
 //
-
+router.get('/gloss', controllers.getGlossary)
 
 module.exports = router;

@@ -1,8 +1,13 @@
 import React from 'react'
-
-const Region = () => {
+import { Link } from 'react-router-dom'
+const Region = (props) => {
   return (
-    <div>Region</div>
+    <Link to={`/regions/${props.r_id}`}>
+    <div className='region-list'>
+      <h1>{props.name}</h1>
+
+    </div>
+    </Link>
   )
 }
 
