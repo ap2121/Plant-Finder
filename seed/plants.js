@@ -9,6 +9,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error'))
 const main = async () => {
     await Plant.collection.drop()
     await Region.collection.drop()
+    await Gloss.collection.drop()
     const region1 = await new Region({
         name: 'Southeast Asia',
         rImg: 'dsjfj'
