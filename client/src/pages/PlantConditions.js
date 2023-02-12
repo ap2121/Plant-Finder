@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
@@ -16,7 +17,12 @@ const PlantConditions = () => {
   useEffect(() =>{
     getConidtions()
   }, [id])
-  
+  const deletePlant = (req, res) => {
+    const deleted = axios.delete(`http://localhost:3001/api/plants/${id}`)
+    if(deleted) {
+      console.log('Deleted')
+    }
+  }
     return currentPlant && (
     <div className='plant-conditions'>
         <h2>
@@ -25,6 +31,10 @@ const PlantConditions = () => {
         <p>
             ({currentPlant.scientificName})
         </p>
+        <Link to={'/plantlist'}>
+        <button onClick={deletePlant}>Delete Plant</button>
+        </Link>
+        <button>Update Plant</button>
     </div>
   )
 }

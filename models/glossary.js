@@ -7,3 +7,4 @@ const Gloss = new Schema({
 })
 
 module.exports = mongoose.model('Gloss', Gloss)
+

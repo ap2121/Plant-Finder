@@ -6,6 +6,7 @@ const Plant = (props) => {
     <div className='plant-card'>
       <h3> {props.commonName}</h3>
       <p>({props.scientificName})</p>
+     
       
       <h4>IMG GOES HERE</h4>
       
