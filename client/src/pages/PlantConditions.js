@@ -17,10 +17,10 @@ const PlantConditions = () => {
   useEffect(() =>{
     getConidtions()
   }, [id])
-  const deletePlant = (req, res) => {
+  const deletePlant = () => {
     const deleted = axios.delete(`http://localhost:3001/api/plants/${id}`)
     if(deleted) {
-      console.log('Deleted')
+      alert('Plant Deleted!')
     }
   }
     return currentPlant && (
