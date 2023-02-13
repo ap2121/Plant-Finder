@@ -32,7 +32,7 @@ const PlantConditions = () => {
   const toggleUpdate = () => {
     setUpdate(!update)
     }
-    console.log(formData)
+    
     const handleChange = (e) => {
       setFormData((prevFormData) => {
         return {
@@ -46,6 +46,15 @@ const PlantConditions = () => {
       })
      
     }
+    const navigate = useNavigate()
+    const handleSub = (e) => {
+    e.preventDefault()
+    axios.put(`http://localhost:3001/api/plants/${id}`, {...formData})
+    setUpdate(false)
+    navigate(`/plants/${id}`)
+
+
+  }  
   const deletePlant = () => {
     const deleted = axios.delete(`http://localhost:3001/api/plants/${id}`)
     if(deleted) {
@@ -64,7 +73,7 @@ const PlantConditions = () => {
         <button onClick={deletePlant}>Delete Plant</button>
         </Link>
         <button onClick={toggleUpdate}>Update Plant</button>
-        {update && <form>
+        {update && <form onSubmit={handleSub}>
           <input type="text" name="commonName" value={formData.commonName} onChange={handleChange}/>
           <input type="text" name="scientificName"value={formData.scientificName} onChange={handleChange}/>
           <input type="text" name="sunExposure"value={formData.sunExposure} onChange={handleChange}/>
