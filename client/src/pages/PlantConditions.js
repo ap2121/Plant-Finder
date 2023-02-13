@@ -1,22 +1,51 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+
 
 
 
 const PlantConditions = () => {
   const [currentPlant, setCurrentPlant] = useState(null)
-    let { id } = useParams()
+  const [update, setUpdate] = useState(false) 
+  const [formData, setFormData] = useState({}) 
+ 
+ 
+  
+  let { id } = useParams()
     const getConidtions = async () => {
     const response = await axios.get(`http://localhost:3001/api/plants/${id}`)
     setCurrentPlant(response.data.plant)
-    console.log(response.data.plant)
+   
   }
   useEffect(() =>{
     getConidtions()
   }, [id])
+
+  useEffect(() =>{
+    setFormData(currentPlant)
+    console.log(currentPlant)
+  },[currentPlant])
+  
+  const toggleUpdate = () => {
+    setUpdate(!update)
+    }
+    console.log(formData)
+    const handleChange = (e) => {
+      setFormData((prevFormData) => {
+        return {
+          ...prevFormData,
+          [e.target.name]: e.target.value
+
+          
+        }
+       
+      
+      })
+     
+    }
   const deletePlant = () => {
     const deleted = axios.delete(`http://localhost:3001/api/plants/${id}`)
     if(deleted) {
@@ -34,7 +63,20 @@ const PlantConditions = () => {
         <Link to={'/plantlist'} className='link'>
         <button onClick={deletePlant}>Delete Plant</button>
         </Link>
-        <button>Update Plant</button>
+        <button onClick={toggleUpdate}>Update Plant</button>
+        {update && <form>
+          <input type="text" name="commonName" value={formData.commonName} onChange={handleChange}/>
+          <input type="text" name="scientificName"value={formData.scientificName} onChange={handleChange}/>
+          <input type="text" name="sunExposure"value={formData.sunExposure} onChange={handleChange}/>
+          <input type="number" name="matureSize" value={formData.matureSize} onChange={handleChange}/>
+          <input type="text" name="soilType" value={formData.soilType} onChange={handleChange}/>
+          <input type="number" name="soilPHAvg" value={formData.soilPHAvg} onChange={handleChange}/>
+          <input type="number" name="hardinessZone" value={formData.hardinessZone} onChange={handleChange}/>
+          <input type="text" name="water" value={formData.water} onChange={handleChange}/>
+          
+          
+          <button>Update Plant</button>
+          </form>}
     </div>
   )
 }
