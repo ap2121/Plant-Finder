@@ -24,14 +24,19 @@ const handleChange = (e) => {
   })
  
 }
-
+const handleSub  = (e) => {
+  e.preventDefault()
+  axios.post('http://localhost:3001/api/plants', 
+   {...formData})
+   
+}
   return (
     <div>
     <h1 className='form-title'>Add a new plant!</h1>
-    <form className='form-container'>
+    <form className='form-container' onSubmit={handleSub}>
     <input type="text" placeholder='Common Name' name='commonName' onChange={handleChange} value={formData.commonName}/>
-    <input type="text" placeholder='Botanical Name' name='botanicalName' onChange={handleChange} value={formData.scientificName}/>
-    <input type="text" placeholder="Image URL" name="Image" onChange={handleChange} value={formData.img}/>
+    <input type="text" placeholder='Botanical Name' name='scientificName' onChange={handleChange} value={formData.scientificName}/>
+    <input type="text" placeholder="Image URL" name="img" onChange={handleChange} value={formData.img}/>
     <input type="text" placeholder='Sun Exposure' name="sunExposure" onChange={handleChange} value={formData.sunExposure}/>
     <input type="number" placeholder='Mature Size' name="matureSize" min="1" onChange={handleChange} value={formData.matureSize}/>
     <input type="text" placeholder='Soil Type' name='soilType' onChange={handleChange} value={formData.soilType}/>
@@ -47,6 +52,7 @@ const handleChange = (e) => {
       <option value="63e8c0aef31caa5f1e8d7fe3">Carribean</option>
       <option value="63e8c0aef31caa5f1e8d7fe4">Southern Europe</option>
     </select>
+    <button>Add Plant</button>
     </form>
   </div>
   )
