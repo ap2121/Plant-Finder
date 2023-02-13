@@ -4,6 +4,8 @@ const Gloss = require('../models/glossary')
 const { findByIdAndDelete } = require('../models/region')
 
 const createPlant = async (req, res) => {
+    
+    console.log(req.body)
     try {
         const plant = await new Plant(req.body)
         await plant.save()
@@ -33,7 +35,7 @@ const getPlants = async (req, res) => {
 const getPlantById = async (req, res) => {
     try {
         const { id } = req.params
-        const plant = await Plant.findById(id)
+        const plant = await Plant.findById(id).populate('nativeRegion')
         return res.status(200).json({
             plant
         })

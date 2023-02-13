@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'  
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 const AddPlant = () => {
   const [formData, setFormData] = useState({
     commonName: "",
@@ -51,12 +51,12 @@ const handleSub  = (e) => {
     <input type="text" placeholder='Water' name='water' onChange={handleChange} value={formData.water}/>
     <select onChange={handleChange} name='nativeRegion' id={formData.nativeRegion} >
       <option value="">Native Region</option>
-      <option value="63e8c0aef31caa5f1e8d7fe0">Southeast Asia</option>
-      <option value="63e8c0aef31caa5f1e8d7fe1">North America</option>
-      <option value="63e8c0aef31caa5f1e8d7fe2">South America</option>
-      <option value="63e8c0aef31caa5f1e8d7fe5">Northern Africa</option>
-      <option value="63e8c0aef31caa5f1e8d7fe3">Carribean</option>
-      <option value="63e8c0aef31caa5f1e8d7fe4">Southern Europe</option>
+      <option value="63ea908dc526c940ea68a721">Southeast Asia</option>
+      <option value="63ea908dc526c940ea68a722">North America</option>
+      <option value="63ea908dc526c940ea68a723">South America</option>
+      <option value="63ea908dc526c940ea68a726">Northern Africa</option>
+      <option value="63ea908dc526c940ea68a724">Carribean</option>
+      <option value="63ea908dc526c940ea68a725">Southern Europe</option>
     </select>
     
     <button>Add Plant</button>
