@@ -31,7 +31,7 @@ const PlantConditions = () => {
         <p>
             ({currentPlant.scientificName})
         </p>
-        <Link to={'/plantlist'}>
+        <Link to={'/plantlist'} className='link'>
         <button onClick={deletePlant}>Delete Plant</button>
         </Link>
         <button>Update Plant</button>

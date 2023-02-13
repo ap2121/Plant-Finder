@@ -9,7 +9,7 @@
   margin: 20px 10px;
   }
 
-.homecard-link {
+.link {
   text-decoration: none;
 }
 
@@ -56,7 +56,7 @@ nav {
 .region-container {
   padding: 2em 0;
   display: grid;
-  grid-template-columns: 300px 300px 300px;
+  grid-template-columns: 200px 200px 200px;
   grid-gap: 1em;
   justify-content: center;
   text-align: center;
@@ -105,7 +105,14 @@ nav {
   border: 4px double #3A5F0B;
   padding: 10px;
 }
-/* .def {
-  border: 4px double #3A5F0B;
-  padding: 10px;
-} */
+ .form-container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1em;
+ }
+
+ .form-title {
+  text-align: center;
+ }
