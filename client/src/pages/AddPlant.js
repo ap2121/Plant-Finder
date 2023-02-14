@@ -13,9 +13,10 @@ const AddPlant = () => {
     soilPHAvg: "",
     hardinessZone: "",
     water: "",
-    nativeRegion: ""
+    nativeRegion: "",
+    garden: ""
 })
-
+console.log(formData)
 const navigate = useNavigate()
 const handleChange = (e) => {
   setFormData((prevFormData) => {
@@ -51,14 +52,18 @@ const handleSub  = (e) => {
     <input type="text" placeholder='Water' name='water' onChange={handleChange} value={formData.water}/>
     <select onChange={handleChange} name='nativeRegion' id={formData.nativeRegion} >
       <option value="">Native Region</option>
-      <option value="63ea908dc526c940ea68a721">Southeast Asia</option>
+      <option value="63ead8b8135080f39d2dadc2">Southeast Asia</option>
       <option value="63ea908dc526c940ea68a722">North America</option>
       <option value="63ea908dc526c940ea68a723">South America</option>
       <option value="63ea908dc526c940ea68a726">Northern Africa</option>
       <option value="63ea908dc526c940ea68a724">Carribean</option>
       <option value="63ea908dc526c940ea68a725">Southern Europe</option>
     </select>
-    
+    <select onChange={handleChange} name="garden" id={formData.garden}>
+      <option>Add to garden</option>
+      <option value={true}>Yes</option>
+      <option value={false}>No</option>
+    </select>
     <button>Add Plant</button>
     
     

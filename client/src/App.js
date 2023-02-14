@@ -7,9 +7,11 @@ import Regions from './pages/Regions'
 import AllPlants from './pages/AllPlants'
 import ShowPlants from './pages/ShowPlants'
 import AddPlant from './pages/AddPlant'
+import MyGarden from './pages/MyGarden'
 import './App.css'
 
 import PlantConditions from './pages/PlantConditions'
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
         <Route path='/addplant' element={<AddPlant/>}/>
         <Route path="/plants/:id" element={<PlantConditions/>}/>
         <Route path='/regions/:r_id' element={<ShowPlants/>}/>
+        <Route path='/mygarden' element={<MyGarden/>}/>
       </Routes>
     </main>
     </div>

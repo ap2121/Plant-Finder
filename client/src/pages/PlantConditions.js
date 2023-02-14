@@ -18,6 +18,7 @@ const PlantConditions = () => {
     const getConidtions = async () => {
     const response = await axios.get(`http://localhost:3001/api/plants/${id}`)
     setCurrentPlant(response.data.plant)
+    console.log(response.data.plant)
    
   }
   useEffect(() =>{

@@ -15,6 +15,11 @@ router.get('/plants/region/:id', controllers.getPlantByRegion)
 //region routes
 router.get('/regions', controllers.getRegions)
 //
+//glossary route
 router.get('/gloss', controllers.getGlossary)
+//
+
+//my garden route
+router.get('/gardenplants', controllers.getGarden)
 
 module.exports = router;

@@ -62,7 +62,8 @@ const main = async () => {
         soilPHAvg: 6.5,
         hardinessZone: 11,
         water: 'Once a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
        
 
     },
@@ -76,7 +77,9 @@ const main = async () => {
         soilPHAvg: 6.5,
         hardinessZone: 10,
         water: 'Bi-weekly',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
+
      },
      {
         commonName: 'Hoya',
@@ -88,7 +91,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 9,
         water: 'Once a week',
-        nativeRegion: region1._id 
+        nativeRegion: region1._id,
+        garden: false
      },
     { 
         commonName: 'Neon Pothos',
@@ -100,7 +104,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 11,
         water: 'Once a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'Orchid',
@@ -112,7 +117,8 @@ const main = async () => {
         soilPHAvg: 6.5,
         hardinessZone: 11,
         water: 'Bi-weekly',
-        nativeRegion: region1._id 
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'Monstera',
@@ -124,7 +130,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 12,
         water: 'Once a week',
-        nativeRegion: region2._id 
+        nativeRegion: region2._id,
+        garden: false
     }, 
     {
         commonName: 'Heartleaf Philodendron',
@@ -136,7 +143,8 @@ const main = async () => {
         soilPHAvg: 5,
         hardinessZone: 9,
         water: 'Once a week',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false
     },
     {
         commonName: 'Watermelon Peperomia',
@@ -148,7 +156,8 @@ const main = async () => {
         soilPHAvg: 6.8,
         hardinessZone: 11,
         water: 'Once a week',
-        nativeRegion: region3._id
+        nativeRegion: region3._id,
+        garden: false
     },
     {
         commonName: 'Stromanthe Triostar',
@@ -160,7 +169,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 10,
         water: 'Once a week',
-        nativeRegion: region3._id
+        nativeRegion: region3._id,
+        garden: false
     },
     {
         commonName: 'Elephant Bush',
@@ -172,7 +182,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 9,
         water: 'Bi-weekly',
-        nativeRegion: region6._id
+        nativeRegion: region6._id,
+        garden: false
     },
     {
         commonName: 'String Of Pearls',
@@ -184,7 +195,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 8,
         water: 'Once a month',
-        nativeRegion: region6._id
+        nativeRegion: region6._id,
+        garden: false
     },
     {
         commonName: 'Purple Shamrock',
@@ -196,7 +208,8 @@ const main = async () => {
         soilPHAvg: 6.2,
         hardinessZone: 9,
         water: 'Once a week',
-        nativeRegion: region6._id
+        nativeRegion: region6._id,
+        garden: false
     },
     {
         commonName: 'Peace Lily',
@@ -208,7 +221,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 11,
         water: 'Once a week',
-        nativeRegion: region3._id
+        nativeRegion: region3._id,
+        garden: false
     },
     {
         commonName: 'Nerve Plant',
@@ -220,7 +234,8 @@ const main = async () => {
         soilPHAvg: 4,
         hardinessZone: 11,
         water: 'Twice a week',
-        nativeRegion: region3._id
+        nativeRegion: region3._id,
+        garden: false
     },
     {
         commonName: 'Chinese Evergreen',
@@ -232,7 +247,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 10,
         water: 'Once a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'Snake Plant',
@@ -244,7 +260,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 9,
         water: 'Once a month',
-        nativeRegion: region6._id
+        nativeRegion: region6._id,
+        garden: false
     },
 
     {
@@ -257,7 +274,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 10,
         water: 'Once a week',
-        nativeRegion: region4._id
+        nativeRegion: region4._id,
+        garden: false
     },
     {
         commonName: 'Aeonium Kiwi',
@@ -269,7 +287,8 @@ const main = async () => {
         soilPHAvg: 6.5,
         hardinessZone: 10,
         water: 'Once a month',
-        nativeRegion: region6._id
+        nativeRegion: region6._id,
+        garden: false
     },
     {
         commonName: 'American Beech Tree',
@@ -281,7 +300,8 @@ const main = async () => {
         soilPHAvg: 5.5,
         hardinessZone: 5,
         water: 'Once a week',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false
     },
     
     {
@@ -294,7 +314,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 10,
         water: 'Bi-weekly',
-        nativeRegion: region3._id
+        nativeRegion: region3._id,
+        garden: false
     },
     {
         commonName: 'Holly',
@@ -306,7 +327,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 6,
         water: 'Bi-weekly',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false
     }, 
    
     {
@@ -319,7 +341,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 10,
         water: 'Once a week',
-        nativeRegion: region4._id
+        nativeRegion: region4._id,
+        garden: false
     },
     {
         commonName: 'Carnation',
@@ -331,7 +354,8 @@ const main = async () => {
         soilPHAvg: 6.5,
         hardinessZone: 6,
         water: 'Once a week',
-        nativeRegion: region5._id 
+        nativeRegion: region5._id,
+        garden: false
     },
     {
         commonName: 'Witch Hazel',
@@ -343,7 +367,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 6,
         water: 'Twice a week',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false
     },
     {
         commonName: 'Wild Cosmos',
@@ -355,7 +380,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 8,
         water: 'Once a week',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false
     },
     {
         commonName: 'White Sage',
@@ -367,7 +393,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 7.5,
         water: 'Once a week',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false
     },
     {
         commonName: 'Weeping Willow',
@@ -379,7 +406,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 6,
         water: 'Once a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'Ficus',
@@ -391,7 +419,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 10,
         water: 'Once a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'Wallflower',
@@ -403,7 +432,8 @@ const main = async () => {
         soilPHAvg: 8,
         hardinessZone: 9,
         water: 'Once a week',
-        nativeRegion: region5._id 
+        nativeRegion: region5._id,
+        garden: false
     },
     {
         commonName: 'Virgina Blue Bells',
@@ -415,7 +445,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 5,
         water: 'Once a week',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false
     },
     {
         commonName: 'Virgina Blue Fern',
@@ -427,7 +458,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 7,
         water: 'Once a week',
-        nativeRegion: region4._id
+        nativeRegion: region4._id,
+        garden: false
     },
     {
         commonName: 'Verona Vain',
@@ -439,7 +471,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 9,
         water: 'Once a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'Venus Fly Trap',
@@ -451,7 +484,8 @@ const main = async () => {
         soilPHAvg: 5,
         hardinessZone: 6,
         water: 'Twice a week',
-        nativeRegion: region2._id 
+        nativeRegion: region2._id,
+        garden: false 
     },
     {
         commonName: 'Tulip',
@@ -463,7 +497,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 5,
         water: 'Once a week',
-        nativeRegion: region5._id
+        nativeRegion: region5._id,
+        garden: false
     }, 
     {
         commonName: 'Toad Lily',
@@ -475,7 +510,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 6,
         water: 'Once a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'Tiger Flower',
@@ -487,7 +523,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 9,
         water: 'Twice a week',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false
 
     }, 
     {
@@ -500,7 +537,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 11,
         water: 'Once a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'The Geo Plant',
@@ -512,7 +550,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 11,
         water: 'Once a week',
-        nativeRegion: region3._id 
+        nativeRegion: region3._id,
+        garden: false 
     },
     {
         commonName: 'Texas Sage',
@@ -524,7 +563,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 11,
         water: 'Twice a week',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false
     },
     {
         commonName: 'String Of Bananas',
@@ -536,7 +576,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 11,
         water: 'Bi-weekly',
-        nativeRegion: region6._id
+        nativeRegion: region6._id,
+        garden: false
     },
     {
         commonName: 'Stinging Nettle',
@@ -548,7 +589,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 8,
         water: 'Once a week',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false
     },
     {
         commonName: 'Stargazer Lily',
@@ -560,7 +602,8 @@ const main = async () => {
         soilPHAvg: 6.5,
         hardinessZone: 6,
         water: 'Once a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'Spiral Aloe',
@@ -572,7 +615,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 8,
         water: 'Once a month',
-        nativeRegion: region6._id
+        nativeRegion: region6._id,
+        garden: false
     },
     {
         commonName: 'Spider Plant',
@@ -584,7 +628,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 8,
         water: 'Once a week',
-        nativeRegion: region6._id 
+        nativeRegion: region6._id,
+        garden: false
     },
     {
         commonName: 'Snow Pea',
@@ -596,7 +641,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 6,
         water: 'Three times a week',
-        nativeRegion: region5._id 
+        nativeRegion: region5._id,
+        garden: false 
     },
     {
         commonName: 'Slipper plant',
@@ -608,7 +654,8 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 8,
         water: 'Bi-weekly',
-        nativeRegion: region3._id
+        nativeRegion: region3._id,
+        garden: false
     },
     {
         commonName: 'Silver Sword',
@@ -620,7 +667,8 @@ const main = async () => {
         soilPHAvg: 5,
         hardinessZone: 7,
         water: 'Once a week',
-        nativeRegion: region3._id
+        nativeRegion: region3._id,
+        garden: false
     },
     {
         commonName: 'Silver Dragon Alocasia',
@@ -632,7 +680,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 10,
         water: 'Twice a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'Satin Tothos',
@@ -644,7 +693,8 @@ const main = async () => {
         soilPHAvg: 6.5,
         hardinessZone: 11,
         water: 'Once a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'Sago Palm',
@@ -656,7 +706,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 10,
         water: 'Once a week',
-        nativeRegion: region1._id  
+        nativeRegion: region1._id,
+        garden: false  
     },
     {
         commonName: 'Moon Cactus',
@@ -668,7 +719,8 @@ const main = async () => {
         soilPHAvg: 6,
         hardinessZone: 12,
         water: 'Once a month',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false
     },
     {
         commonName: 'Rockrose',
@@ -680,7 +732,8 @@ const main = async () => {
         soilPHAvg: 6.5,
         hardinessZone: 7,
         water: 'Once a week',
-        nativeRegion: region5._id
+        nativeRegion: region5._id,
+        garden: false
     },
     {
         commonName: 'Red Spider Lily',
@@ -692,7 +745,8 @@ const main = async () => {
         soilPHAvg: 6.5,
         hardinessZone: 8,
         water: 'Once a week',
-        nativeRegion: region1._id 
+        nativeRegion: region1._id,
+        garden: false
 
     },
     {
@@ -705,7 +759,8 @@ const main = async () => {
         soilPHAvg: 6.5,
         hardinessZone: 8,
         water: 'Once a week',
-        nativeRegion: region1._id
+        nativeRegion: region1._id,
+        garden: false
     },
     {
         commonName: 'Rain Lily',
@@ -717,7 +772,8 @@ const main = async () => {
         soilPHAvg: 6.5,
         hardinessZone: 8,
         water: 'Once a week',
-        nativeRegion: region3._id
+        nativeRegion: region3._id,
+        garden: false
     },
     {
         commonName: 'Pussy Willow',
@@ -729,7 +785,9 @@ const main = async () => {
         soilPHAvg: 7,
         hardinessZone: 6,
         water: 'Once a week',
-        nativeRegion: region2._id
+        nativeRegion: region2._id,
+        garden: false,
+    
     }
 
      
