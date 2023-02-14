@@ -1,3 +1,7 @@
+body {
+  font-family: 'Gamja Flower', cursive;
+}
+
 .home-screen {
   display: flex;
   justify-content: center;

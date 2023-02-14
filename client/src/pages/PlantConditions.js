@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
+
 
 
 
@@ -12,13 +12,13 @@ const PlantConditions = () => {
   const [update, setUpdate] = useState(false) 
   const [formData, setFormData] = useState({}) 
  
- 
+  
   
   let { id } = useParams()
     const getConidtions = async () => {
     const response = await axios.get(`http://localhost:3001/api/plants/${id}`)
     setCurrentPlant(response.data.plant)
-    console.log(response.data.plant)
+    
    
   }
   useEffect(() =>{
@@ -50,7 +50,7 @@ const PlantConditions = () => {
     const navigate = useNavigate()
     const handleSub = (e) => {
     e.preventDefault()
-    axios.put(`http://localhost:3001/api/plants/${id}`, {...formData})
+    axios.put(`http://localhost:3001/api/plants/${id}`, formData)
     setUpdate(false)
     navigate(`/plants/${id}`)
 
@@ -62,6 +62,15 @@ const PlantConditions = () => {
       alert('Plant Deleted!')
     }
   }
+
+ const addToGarden = () => {
+    const newPlant = {
+      ...currentPlant,
+      garden: !currentPlant.garden
+    }
+    axios.put(`http://localhost:3001/api/plants/${id}`, newPlant)
+    navigate('/mygarden')
+ }
     return currentPlant && (
     <div className='plant-conditions'>
         <h2>
@@ -74,6 +83,7 @@ const PlantConditions = () => {
         <button onClick={deletePlant}>Delete Plant</button>
         </Link>
         <button onClick={toggleUpdate}>Update Plant</button>
+        <button onClick={addToGarden}>{currentPlant.garden ? 'Remove from garden' : 'Add to my garden'}</button>
         {update && <form onSubmit={handleSub}>
           <input type="text" name="commonName" value={formData.commonName} onChange={handleChange}/>
           <input type="text" name="scientificName"value={formData.scientificName} onChange={handleChange}/>

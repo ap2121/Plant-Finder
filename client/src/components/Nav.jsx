@@ -5,10 +5,10 @@ const Nav = () => {
     <header>
     <nav>
         <Link to={'/'} className='nav-item'>Home</Link>
+        <Link to={'/mygarden'} className='nav-item'>My Garden</Link>
         <Link to={'/regions'} className='nav-item'>Regions</Link>
         <Link to={'/plantlist'} className='nav-item'>All Plants</Link>
         <Link to={'/addplant'} className='nav-item'>Add New Plant</Link>
-        <Link to={'/mygarden'} className='nav-item'>My Garden</Link>
         <Link to={'/glossary'} className='nav-item'>Glossary</Link>
         
     </nav>
