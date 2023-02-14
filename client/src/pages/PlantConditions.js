@@ -26,7 +26,7 @@ const PlantConditions = () => {
 
   useEffect(() =>{
     setFormData(currentPlant)
-    console.log(currentPlant)
+    
   },[currentPlant])
   
   const toggleUpdate = () => {

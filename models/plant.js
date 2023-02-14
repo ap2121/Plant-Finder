@@ -11,7 +11,8 @@ const Plant = new Schema({
     soilPHAvg: {type: Number, required: true},
     hardinessZone: {type: Number, required: true},
     water: {type: String, required: true},
-    nativeRegion: {type: Schema.Types.ObjectId, ref: 'Region'}
+    nativeRegion: {type: Schema.Types.ObjectId, ref: 'Region'},
+    garden: {type: Boolean, required: true}
    
 
 
