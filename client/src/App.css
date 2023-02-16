@@ -145,11 +145,10 @@ nav {
 }
 
 .glossary-container h2 {
-  text-decoration: underline;
-  text-underline-position: under;
+  
   color: black;
   text-align: center;
-  font-size: 30px;
+  font-size: 60px;
 }
 
 .grid-container {
