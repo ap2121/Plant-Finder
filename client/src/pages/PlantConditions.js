@@ -96,13 +96,14 @@ const PlantConditions = () => {
         </div>
         
         
-        
+      
         <Link to={'/plantlist'} className='link'>
-        <button onClick={deletePlant} className='con-item'>Delete Plant</button>
+        <button onClick={deletePlant} className='con-item con-btn' >Delete Plant</button>
         </Link>
-        <button onClick={toggleUpdate} className='con-item'>Update Plant</button>
-        <button onClick={addToGarden} className='con-item'>{currentPlant.garden ? 'Remove from garden' : 'Add to my garden'}</button>
-        {update && <form onSubmit={handleSub} className='form-container'>
+        <button onClick={toggleUpdate} className='con-item con-btn'>Update Plant</button>
+        <button onClick={addToGarden} className='con-item con-btn'>{currentPlant.garden ? 'Remove from garden' : 'Add to my garden'}</button>
+        {update && <form onSubmit={handleSub} className='form-container con-btn'>
+          
           <input type="text" name="commonName" value={formData.commonName} onChange={handleChange}/>
           <input type="text" name="scientificName"value={formData.scientificName} onChange={handleChange}/>
           <input type="text" name="sunExposure"value={formData.sunExposure} onChange={handleChange}/>

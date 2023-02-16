@@ -319,3 +319,7 @@ img:not(:hover) {
   transition: 500ms;
   transition-timing-function: linear;
 }
+
+.con-btn {
+  margin-top: 100px;
+}
