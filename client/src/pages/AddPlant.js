@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'  
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 const AddPlant = () => {
+  const [regions, setRegions] = useState([])
   const [formData, setFormData] = useState({
     commonName: "",
     scientificName: "",
@@ -16,7 +17,21 @@ const AddPlant = () => {
     nativeRegion: "",
     garden: ""
 })
-console.log(formData)
+
+const getRegions = async () => {
+  const response = await axios.get('/api/regions');
+  setRegions(response.data.regions)
+  
+}
+
+useEffect(() => {
+  getRegions()
+
+  
+}, [])
+
+
+
 const navigate = useNavigate()
 const handleChange = (e) => {
   setFormData((prevFormData) => {
@@ -37,6 +52,8 @@ const handleSub  = (e) => {
    navigate('/plantlist')
    
 }
+
+
   return (
     <div>
     <h1 className='form-title'>Add a new plant!</h1>
@@ -52,12 +69,9 @@ const handleSub  = (e) => {
     <input type="text" placeholder='Water' name='water' onChange={handleChange} value={formData.water}/>
     <select onChange={handleChange} name='nativeRegion' id={formData.nativeRegion} >
       <option value="">Native Region</option>
-      <option value="63ead8b8135080f39d2dadc2">Southeast Asia</option>
-      <option value="63ea908dc526c940ea68a722">North America</option>
-      <option value="63ea908dc526c940ea68a723">South America</option>
-      <option value="63ea908dc526c940ea68a726">Northern Africa</option>
-      <option value="63ea908dc526c940ea68a724">Carribean</option>
-      <option value="63ea908dc526c940ea68a725">Southern Europe</option>
+          {regions.length > 0 && regions.map((region)=>(
+            <option key={region._id} value={region._id}>{region.name}</option>
+          ))}
     </select>
     <select onChange={handleChange} name="garden" id={formData.garden}>
       <option>Add to garden</option>
