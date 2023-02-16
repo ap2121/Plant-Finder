@@ -329,5 +329,6 @@ img:not(:hover) {
 .titles {
   text-align: center;
   color: white;
-  font-size: 75px;
+  font-size: 60px;
 }
+
