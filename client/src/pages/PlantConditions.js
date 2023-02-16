@@ -84,7 +84,7 @@ const PlantConditions = () => {
         <div className='first-three condition-grid'>
         <p className='con-item'>Water: {currentPlant.water}</p>
         <p className='con-item'>Sun Exposure: {currentPlant.sunExposure}</p>
-        <p className='con-item'>Mature Size: {currentPlant.matureSize}</p>
+        <p className='con-item'>Mature Size: {currentPlant.matureSize} IN</p>
         </div>
         <div className='condition-img-container'>
         <img src={currentPlant.img} className='condition-img'/>
