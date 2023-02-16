@@ -123,6 +123,7 @@ nav {
   justify-content: center;
   text-align: center;
   
+  
 }
 
 .region-list {
@@ -149,6 +150,7 @@ nav {
   color: black;
   text-align: center;
   font-size: 60px;
+  animation: con-load 375ms ease-in;
 }
 
 .grid-container {
@@ -331,5 +333,6 @@ img:not(:hover) {
   text-align: center;
   color: white;
   font-size: 60px;
+  animation: con-load 375ms ease-in;
 }
 
