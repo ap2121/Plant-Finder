@@ -6,7 +6,7 @@ import GlossCard from '../components/GlossCard'
 const Glossary = () => {
  const [currentGloss, setCurrentGloss] = useState([])
  const getGlossy = async () => {
-  const response = await axios.get('http://localhost:3001/api/gloss')
+  const response = await axios.get('/api/gloss')
   setCurrentGloss(response.data.defs)
   console.log(response.data.defs)
  } 

@@ -2,13 +2,19 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 const Home = () => {
   return (
-    <div className='home-screen'>
+    <div className='home-all'>
+    <div className='home-content'>
+        
+       <div className='home-screen'>
         <Link to={'/regions'} className='link'>
-            <h3 className='home-card' id='home-regions'>Regions Card</h3>
+            <button className='home-card'>Region List</button>
         </Link>
+        
         <Link to={'/plantlist'} className='link'>
-            <h3 className='home-card' id='home-plants'>Plants Card</h3>
+            <button className='home-card'>Plant List</button>
         </Link>
+        </div>
+    </div>
     </div>
   )
 }

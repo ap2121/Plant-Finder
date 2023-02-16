@@ -1,33 +1,89 @@
+
 body {
-  font-family: 'Gamja Flower', cursive;
+  font-family: 'Abril Fatface', cursive;
+  background-color:#75816b;
+  background-size: 100vh;
+  
 }
 
+button {
+  font-family: 'Abril Fatface', cursive;
+}
+
+@keyframes con-load {
+ 0% {
+  transform: translateY(-100%)
+ }
+ 100% {
+  transform: translateY(0)
+ }
+}
+ 
+
+button:hover {
+  opacity: .5;
+  cursor: pointer;
+}
 .home-screen {
   display: flex;
   justify-content: center;
+ 
+  
+  
   
 
 }
 
 .home-card {
-  margin: 20px 10px;
-  }
+  margin: 240px 60px;
+  background-color: #776b81;
+  color: white;
+  height: 300px;
+  width: 400px;
+  font-size: 60px;
+  border-radius: 10px;
+  
 
+  }
+.home-card:hover {
+  height: 200px;
+  width: 500px;
+  transition: 250ms;
+  transition-timing-function: linear;
+}
+
+.home-card:not(:hover) {
+  margin: 240px 60px;
+  background-color: #776b81;
+  color: white;
+  height: 300px;
+  width: 400px;
+  font-size: 60px;
+  border-radius: 10px;
+  transition: 400ms;
+  transition-timing-function: linear;
+}
 .link {
   text-decoration: none;
 }
 
 nav {
-  background-color: #3A5F0B;
-  padding: 10px;
+  background-color:#776b81;
+  padding: 15px;
   display: flex;
   justify-content: space-around;
+  box-shadow: 0 2px 4px -2px rgba(0,0,0,.2);
+  position: relative;
+ 
+ 
 }
+
 
 .nav-item {
   margin: 10px;
   text-decoration: none;
   color: white;
+  font-weight: bold;
 }
 
 
@@ -36,10 +92,11 @@ nav {
   max-width: 300px;
   max-height: 380px;
   border-radius: 10px;
-  background-color: #3A5F0B;
+  background-color:#776b81;
   cursor: pointer;
   transition: all 0.2s;
   color: white;
+  
   
 }
 
@@ -54,30 +111,34 @@ nav {
 
 .plant-conditions {
   text-align: center;
+  color: white;
   
 }
 
 .region-container {
   padding: 2em 0;
   display: grid;
-  grid-template-columns: 200px 200px 200px;
-  grid-gap: 1em;
+  grid-template-columns: 300px 300px 300px;
+  grid-gap: 2em;
   justify-content: center;
   text-align: center;
+  
 }
 
 .region-list {
-  max-width: 300px;
+  max-width: 400px;
   max-height: 380px;
   border-radius: 10px;
-  background-color: #3A5F0B;
+  background-color: #776b81;
   cursor: pointer;
   transition: all 0.2s;
   color: white;
+  
 }
 
 .glossary-container {
   text-align: center;
+  
   
   
   
@@ -86,6 +147,9 @@ nav {
 .glossary-container h2 {
   text-decoration: underline;
   text-underline-position: under;
+  color: black;
+  text-align: center;
+  font-size: 30px;
 }
 
 .grid-container {
@@ -106,8 +170,13 @@ nav {
 } 
 
 .def-container {
-  border: 4px double #3A5F0B;
+  border: 4px double #776b81;
   padding: 10px;
+  color: black;
+  background-color: #776b81;
+  border-radius: 5px;
+  font-size: 18px;
+  margin-top: 50px;
 }
  .form-container {
   display: grid;
@@ -119,8 +188,134 @@ nav {
 
  .form-title {
   text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  color: white;
  }
 
  .garden-title {
   text-align: center;
+  font-family: 'Abril Fatface', cursive;
  }
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  
+  
+  
+  
+  
+}
+img:hover {
+  width: 230px;
+  height: 230px;
+  border-radius: 5px;
+  transition-duration: 225ms;
+  transition-timing-function: linear;
+
+
+  opacity: .75;
+}
+
+img:not(:hover) {
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  transition: 350ms;
+  transition-timing-function: linear;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.first-three {
+  display: flex;
+  justify-content: center;
+
+}
+
+.con-item {
+ margin: 10px;
+ border: 1px solid black;
+ padding: 15px;
+ background-color: #776b81;
+ color: white;
+ animation: con-load 375ms ease-in;
+}
+
+.condition-title {
+  border: 1px soild black;
+}
+
+.condition-grid {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+}
+
+.home-content {
+  text-align: center;
+ 
+  
+}
+
+.home-content h2 {
+  font-size: 70px;
+  color:#776b81;
+
+  
+}
+
+.home-all {
+  background-image: url('https://wallpaper.dog/large/10970756.jpg');
+  background-size: 100vh;
+  display: flex;
+ justify-content: center;
+}
+
+
+
+
+.plant-list {
+  background-image: linear-gradient(#75816b, #90917E );
+  background-size: 100vh;
+ 
+}
+
+.all-garden {
+  background-color:#75816b;
+  background-size: 100vh;
+}
+
+.condition-img-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+.condition-img {
+  height: 200px;
+  width: 200px;
+  border: 4px solid #776b81;
+  animation: con-load 400ms ease-in;
+}
+
+.condition-img:hover {
+  height: 500px;
+  width: 500px;
+  border: none;
+  transition: 390ms;
+  transition-timing-function: linear;
+  opacity: 1;
+
+}
+
+.condition-img:not(:hover) {
+  height: 200px;
+  width: 200px;
+  border: 4px solid #776b81;
+  transition: 500ms;
+  transition-timing-function: linear;
+}

@@ -21,15 +21,18 @@ const MyGarden = () => {
     commonName={plant.commonName}
     scientificName={plant.scientificName}
     id={plant._id}
+    img={plant.img}
 
 
     />
   ))
  
     return(
-    <div>
-        <h1 className='garden-title'>My Garden</h1>
+    <div className='all-garden'>
+        
+        <div className='container-grid my-garden-margin'>
         {renderGarden}
+        </div>
         
     </div>
   )

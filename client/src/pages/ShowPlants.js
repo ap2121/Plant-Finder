@@ -23,6 +23,7 @@ const ShowPlants = () => {
     commonName = {plant.commonName}
     scientificName={plant.scientificName}
     id={plant._id}
+    img={plant.img}
     
    />
   ))

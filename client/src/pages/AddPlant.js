@@ -32,7 +32,7 @@ const handleChange = (e) => {
 }
 const handleSub  = (e) => {
   e.preventDefault()
-  axios.post('http://localhost:3001/api/plants', 
+  axios.post('/api/plants', 
    {...formData})
    navigate('/plantlist')
    

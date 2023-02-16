@@ -18,11 +18,14 @@ const Regions = () => {
     key={region._id}
     name={region.name}
     r_id={region._id}
+    rImg={region.rImg}
     />
   ))
     return (
+    <div className='all-region'>
     <div className='region-container'>
         {allRegions}
+    </div>
     </div>
   )
 }

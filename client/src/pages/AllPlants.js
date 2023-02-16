@@ -6,7 +6,7 @@ import {useState, useEffect} from 'react'
 const AllPlants = () => {
    const [currentPlants, setCurrentPlants] = useState([])
    const getPlants = async () => {
-    const response = await axios.get('http://localhost:3001/api/plants')
+    const response = await axios.get('/api/plants')
     setCurrentPlants(response.data.plants)
    
    }
@@ -21,6 +21,7 @@ const AllPlants = () => {
     commonName = {plant.commonName}
     scientificName={plant.scientificName}
     id={plant._id}
+    img={plant.img}
    />
   ))
     

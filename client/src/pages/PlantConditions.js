@@ -73,18 +73,36 @@ const PlantConditions = () => {
  }
     return currentPlant && (
     <div className='plant-conditions'>
+        
         <h2>
             {currentPlant.commonName}
         </h2>
+        
         <p>
             ({currentPlant.scientificName})
         </p>
+        <div className='first-three condition-grid'>
+        <p className='con-item'>Water: {currentPlant.water}</p>
+        <p className='con-item'>Sun Exposure: {currentPlant.sunExposure}</p>
+        <p className='con-item'>Mature Size: {currentPlant.matureSize}</p>
+        </div>
+        <div className='condition-img-container'>
+        <img src={currentPlant.img} className='condition-img'/>
+        </div>
+        <div className='first-three condition-grid'>
+        <p className='con-item'>Soil Type: {currentPlant.soilType}</p>
+        <p className='con-item'>Soil PH Level: {currentPlant.soilPHAvg}</p>
+        <p className='con-item'>Hardiness Zone: {currentPlant.hardinessZone}</p>
+        </div>
+        
+        
+        
         <Link to={'/plantlist'} className='link'>
-        <button onClick={deletePlant}>Delete Plant</button>
+        <button onClick={deletePlant} className='con-item'>Delete Plant</button>
         </Link>
-        <button onClick={toggleUpdate}>Update Plant</button>
-        <button onClick={addToGarden}>{currentPlant.garden ? 'Remove from garden' : 'Add to my garden'}</button>
-        {update && <form onSubmit={handleSub}>
+        <button onClick={toggleUpdate} className='con-item'>Update Plant</button>
+        <button onClick={addToGarden} className='con-item'>{currentPlant.garden ? 'Remove from garden' : 'Add to my garden'}</button>
+        {update && <form onSubmit={handleSub} className='form-container'>
           <input type="text" name="commonName" value={formData.commonName} onChange={handleChange}/>
           <input type="text" name="scientificName"value={formData.scientificName} onChange={handleChange}/>
           <input type="text" name="sunExposure"value={formData.sunExposure} onChange={handleChange}/>
