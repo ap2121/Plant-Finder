@@ -14,6 +14,8 @@ Search and find your house plants from different regions and get the proper grow
 - Img2
 
 ## Future Updates
-- Updating databse
+- User authentication/Allowing Users to have individual gardens
 - Allow for range of numbers in NUMBER types
+- Better overall CSS
+- Page transitions and animations on load for each page
 
