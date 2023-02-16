@@ -238,12 +238,13 @@ img:not(:hover) {
 }
 
 .con-item {
- margin: 10px;
- border: 1px solid black;
+ margin: 5px;
+ border: 1px soild #776b81;
  padding: 15px;
  background-color: #776b81;
  color: white;
  animation: con-load 375ms ease-in;
+ border-radius: 5px;
 }
 
 .condition-title {
