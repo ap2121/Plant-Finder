@@ -29,7 +29,7 @@ const MyGarden = () => {
  
     return(
     <div className='all-garden'>
-        
+        <h1 className='titles'>My Garden</h1>
         <div className='container-grid my-garden-margin'>
         {renderGarden}
         </div>

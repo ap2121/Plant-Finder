@@ -22,7 +22,9 @@ const Regions = () => {
     />
   ))
     return (
+    
     <div className='all-region'>
+      <h1 className='titles'>Regions</h1>
     <div className='region-container'>
         {allRegions}
     </div>

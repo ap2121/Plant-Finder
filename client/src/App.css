@@ -326,3 +326,9 @@ img:not(:hover) {
   margin-bottom: 0;
 }
 
+.titles {
+  text-align: center;
+  color: white;
+  text-decoration: underline;
+  text-underline-position: below;
+}

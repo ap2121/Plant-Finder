@@ -26,8 +26,11 @@ const AllPlants = () => {
   ))
     
     return (
+    <div>
+      <h1 className='titles'>All Plants</h1>
     <div className='plant-list container-grid'>
        {allPlants}
+    </div>
     </div>
   )
 }
