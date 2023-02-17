@@ -8,7 +8,7 @@ const Glossary = () => {
  const getGlossy = async () => {
   const response = await axios.get('/api/gloss')
   setCurrentGloss(response.data.defs)
-  console.log(response.data.defs)
+  
  } 
 
  useEffect(()=>{

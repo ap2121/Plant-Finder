@@ -5,7 +5,7 @@ const Region = (props) => {
     <Link to={`/regions/${props.r_id}`} className='link'>
     <div className='region-list'>
       <h1>{props.name}</h1>
-      <h1>Plants</h1>
+      
       <img src={props.rImg}/>
       
     </div>
