@@ -412,7 +412,7 @@ const main = async () => {
     {
         commonName: 'Ficus',
         scientificName: 'Ficus benjamina',
-        img: 'shttps://www.plantvine.com/plants/Variegated-Ficus-Benjamina-Braid.jpg',
+        img: 'https://www.plantvine.com/plants/Variegated-Ficus-Benjamina-Braid.jpg',
         sunExposure: 'Full sun', 
         matureSize: 240,
         soilType: 'Well draining',
