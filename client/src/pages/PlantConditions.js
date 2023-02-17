@@ -53,6 +53,7 @@ const PlantConditions = () => {
     axios.put(`http://localhost:3001/api/plants/${id}`, formData)
     setUpdate(false)
     navigate(`/plants/${id}`)
+    setCurrentPlant(formData)
 
 
   }  
