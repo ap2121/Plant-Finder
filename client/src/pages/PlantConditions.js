@@ -82,17 +82,17 @@ const PlantConditions = () => {
             ({currentPlant.scientificName})
         </p>
         <div className='first-three condition-grid'>
-        <p className='con-item'>Water: {formData.water}</p>
-        <p className='con-item'>Sun Exposure: {formData.sunExposure}</p>
-        <p className='con-item'>Mature Size: {formData.matureSize} IN</p>
+        <p className='con-item'>Water: {currentPlant.water}</p>
+        <p className='con-item'>Sun Exposure: {currentPlant.sunExposure}</p>
+        <p className='con-item'>Mature Size: {currentPlant.matureSize} IN</p>
         </div>
         <div className='condition-img-container'>
         <img src={currentPlant.img} className='condition-img'/>
         </div>
         <div className='first-three condition-grid'>
-        <p className='con-item'>Soil Type: {formData.soilType}</p>
-        <p className='con-item'>Soil PH Level: {formData.soilPHAvg}</p>
-        <p className='con-item'>Hardiness Zone: {formData.hardinessZone}</p>
+        <p className='con-item'>Soil Type: {currentPlant.soilType}</p>
+        <p className='con-item'>Soil PH Level: {currentPlant.soilPHAvg}</p>
+        <p className='con-item'>Hardiness Zone: {currentPlant.hardinessZone}</p>
         </div>
         
         
