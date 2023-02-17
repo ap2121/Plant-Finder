@@ -104,8 +104,7 @@ const PlantConditions = () => {
         <button onClick={addToGarden} className='con-item con-btn'>{currentPlant.garden ? 'Remove from garden' : 'Add to my garden'}</button>
         {update && <form onSubmit={handleSub} className='form-container con-btn'>
           
-          <input type="text" name="commonName" value={formData.commonName} onChange={handleChange} className='form-btn'/>
-          <input type="text" name="scientificName"value={formData.scientificName} onChange={handleChange} className='form-btn'/>
+         
           <input type="text" name="sunExposure"value={formData.sunExposure} onChange={handleChange} className='form-btn'/>
           <input type="number" name="matureSize" value={formData.matureSize} onChange={handleChange} className='form-btn'/>
           <input type="text" name="soilType" value={formData.soilType} onChange={handleChange} className='form-btn'/>
