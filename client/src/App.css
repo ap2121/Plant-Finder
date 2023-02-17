@@ -286,8 +286,8 @@ img:not(:hover) {
 }
 
 .home-all {
-  background-image: url('https://wallpaper.dog/large/10970756.jpg');
-  background-size: 100vh;
+  
+  
   display: flex;
  justify-content: center;
 }
