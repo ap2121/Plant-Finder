@@ -7,7 +7,7 @@ import Plant from '../components/Plant'
 const MyGarden = () => {
   const [gardenPlants, setGardenPlants] = useState([])
   const getGardenPlants = async () => {
-    const response = await axios.get('http://localhost:3001/api/gardenplants')
+    const response = await axios.get('/api/gardenplants')
     setGardenPlants(response.data.plants)
   }
 

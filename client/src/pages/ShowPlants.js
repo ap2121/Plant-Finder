@@ -8,7 +8,7 @@ const ShowPlants = () => {
   const [currentPlants, setCurrentPlants] = useState([])
   let {r_id} = useParams()
   const getPlants = async () => {
-    const response = await axios.get(`http://localhost:3001/api/plants/region/${r_id}`)
+    const response = await axios.get(`/api/plants/region/${r_id}`)
     setCurrentPlants(response.data.plants)
     
   }

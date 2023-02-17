@@ -5,7 +5,7 @@ import axios from 'axios'
 const Regions = () => {
   const [currentRegions, setCurrentRegions] = useState([])
   const getRegions = async () => {
-    const response = await axios.get('http://localhost:3001/api/regions')
+    const response = await axios.get('/api/regions')
     setCurrentRegions(response.data.regions)
     
   }

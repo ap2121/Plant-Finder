@@ -16,7 +16,7 @@ const PlantConditions = () => {
   
   let { id } = useParams()
     const getConidtions = async () => {
-    const response = await axios.get(`http://localhost:3001/api/plants/${id}`)
+    const response = await axios.get(`/api/plants/${id}`)
     setCurrentPlant(response.data.plant)
     
    
