@@ -50,15 +50,16 @@ const PlantConditions = () => {
     const navigate = useNavigate()
     const handleSub = (e) => {
     e.preventDefault()
-    axios.put(`http://localhost:3001/api/plants/${id}`, formData)
+    axios.put(`/api/plants/${id}`, formData)
     setUpdate(false)
     navigate(`/plants/${id}`)
     setCurrentPlant(formData)
+    
 
 
   }  
   const deletePlant = () => {
-    const deleted = axios.delete(`http://localhost:3001/api/plants/${id}`)
+    const deleted = axios.delete(`/api/plants/${id}`)
     if(deleted) {
       alert('Plant Deleted!')
     }
@@ -69,7 +70,7 @@ const PlantConditions = () => {
       ...currentPlant,
       garden: !currentPlant.garden
     }
-    axios.put(`http://localhost:3001/api/plants/${id}`, newPlant)
+    axios.put(`/api/plants/${id}`, newPlant)
     navigate('/mygarden')
  }
     return currentPlant && (
