@@ -7,7 +7,7 @@ const Regions = () => {
   const getRegions = async () => {
     const response = await axios.get('http://localhost:3001/api/regions')
     setCurrentRegions(response.data.regions)
-    console.log(response.data.regions)
+    
   }
 
   useEffect(() =>{
