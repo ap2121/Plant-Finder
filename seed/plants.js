@@ -7,9 +7,7 @@ const Gloss = require('../models/glossary')
 db.on('error', console.error.bind(console, 'MongoDB connection error'))
 
 const main = async () => {
-    await Plant.collection.drop()
-    await Region.collection.drop()
-    await Gloss.collection.drop()
+   
     const region1 = await new Region({
         name: 'Southeast Asia',
         rImg: 'https://static.scholar.harvard.edu/files/styles/os_files_xxlarge/public/vincentjelani/files/waterfall.jpg?m=1499794157&itok=oQsdLpry'
